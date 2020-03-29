@@ -1,5 +1,5 @@
 <template>
-  <div class="home">1</div>
+  <div class="home"></div>
 </template>
 
 <script>
@@ -10,3 +10,8 @@ export default {
   components: {}
 };
 </script>
+<style scoped>
+.home {
+  background-color: #36afff;
+}
+</style>

@@ -1,16 +1,23 @@
 <template>
   <div id="app">
-    <transition>
-      <router-view />
-    </transition>
+    <Fullpage :Options="Options" />
   </div>
 </template>
 <script lang="ts">
 import Vue from "vue";
+import Fullpage from "./views/Fullpage.vue";
 export default Vue.extend({
   name: "app",
   data() {
-    return {};
+    return {
+      Options: {
+        routes: ["/", "/about", "/test", "/test2"],
+        transtionTime: 1000
+      }
+    };
+  },
+  components: {
+    Fullpage
   }
 });
 </script>
@@ -19,5 +26,6 @@ body {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 </style>

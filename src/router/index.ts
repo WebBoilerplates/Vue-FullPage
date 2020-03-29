@@ -8,12 +8,22 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import("../views/Home.vue")
+    component: () => import("../views/Fullpage/Home.vue")
   },
   {
     path: "/about",
     name: "About",
-    component: () => import("../views/About.vue")
+    component: () => import("../views/Fullpage/About.vue")
+  },
+  {
+    path: "/test",
+    name: "About2",
+    component: () => import("../views/Fullpage/About2.vue")
+  },
+  {
+    path: "/test2",
+    name: "About3",
+    component: () => import("../views/Fullpage/About3.vue")
   }
 ]
 
