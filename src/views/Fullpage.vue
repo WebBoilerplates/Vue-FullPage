@@ -20,7 +20,7 @@ export default Vue.extend({
     return {
       animation: "",
       progressState: false,
-      position: 0,
+      positionNumber: 0,
       touchPositionStart: 0,
       touchPositionEnd: 0,
       mousePositionStart: 0,
@@ -92,24 +92,27 @@ export default Vue.extend({
     progress(reaction: string) {
       this.animation = reaction;
       this.progressState = true;
-      this.position = this.Options.routes.indexOf(
+      this.positionNumber = this.Options.routes.indexOf(
         window.location.pathname.replace(this.Options.BasicPath, "")
       );
-      if (reaction === "up" && this.position !== 0) {
+      if (reaction === "up" && this.positionNumber !== 0) {
         setTimeout(() => {
           this.progressState = false;
         }, this.Options.transtionTime);
-        --this.position;
-        this.$router.replace(this.Options.routes[this.position]);
+        --this.positionNumber;
+        console.log(this.Options.routes[this.positionNumber]);
+
+        this.$router.push(this.Options.routes[this.positionNumber]);
       } else if (
         reaction === "down" &&
-        this.position != this.Options.routes.length - 1
+        this.positionNumber != this.Options.routes.length - 1
       ) {
         setTimeout(() => {
           this.progressState = false;
         }, this.Options.transtionTime);
-        ++this.position;
-        this.$router.replace(this.Options.routes[this.position]);
+        ++this.positionNumber;
+        console.log(this.Options.routes[this.positionNumber]);
+        this.$router.push(this.Options.routes[this.positionNumber]);
       } else {
         this.progressState = false;
       }
