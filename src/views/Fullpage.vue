@@ -95,13 +95,16 @@ export default Vue.extend({
       this.positionNumber = this.Options.routes.indexOf(
         window.location.pathname.replace(this.Options.BasicPath, "")
       );
+      console.log(
+        this.positionNumber,
+        window.location.pathname.replace(this.Options.BasicPath, "")
+      );
       if (reaction === "up" && this.positionNumber !== 0) {
         setTimeout(() => {
           this.progressState = false;
         }, this.Options.transtionTime);
         --this.positionNumber;
         console.log(this.Options.routes[this.positionNumber]);
-
         this.$router.push(this.Options.routes[this.positionNumber]);
       } else if (
         reaction === "down" &&
