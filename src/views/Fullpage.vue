@@ -92,7 +92,9 @@ export default Vue.extend({
     progress(reaction: string) {
       this.animation = reaction;
       this.progressState = true;
-      this.position = this.Options.routes.indexOf(window.location.pathname);
+      this.position = this.Options.routes.indexOf(
+        window.location.pathname.replace(this.Options.BasicPath, "")
+      );
       if (reaction === "up" && this.position !== 0) {
         setTimeout(() => {
           this.progressState = false;
