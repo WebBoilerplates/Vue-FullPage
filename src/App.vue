@@ -13,7 +13,7 @@ export default Vue.extend({
       Options: {
         routes: ["/", "/about", "/test", "/test2"],
         transtionTime: 1000,
-        BasicPath: "/Vue-Fullpage"
+        BasicPath: "/Vue-FullPage"
       }
     };
   },
