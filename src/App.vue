@@ -11,7 +11,12 @@ export default Vue.extend({
   data() {
     return {
       Options: {
-        routes: ["/", "/about", "/test", "/test2"],
+        routes: [
+          "/Vue-FullPage/",
+          "/Vue-FullPage/about",
+          "/Vue-FullPage/test",
+          "/Vue-FullPage/test2"
+        ],
         transtionTime: 1000
       }
     };

@@ -109,7 +109,6 @@ export default Vue.extend({
         ++this.position;
         this.$router.replace(this.Options.routes[this.position]);
       } else {
-        console.log("시작과 끝");
         this.progressState = false;
       }
     }
