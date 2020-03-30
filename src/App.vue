@@ -23,6 +23,9 @@ export default Vue.extend({
 });
 </script>
 <style lang="scss">
+html {
+  overflow: hidden;
+}
 body {
   margin: 0px;
   padding: 0px;

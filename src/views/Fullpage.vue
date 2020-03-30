@@ -100,7 +100,6 @@ export default Vue.extend({
           this.progressState = false;
         }, this.Options.transtionTime);
         --this.positionNumber;
-        console.log(this.Options.routes[this.positionNumber]);
         this.$router.push(this.Options.routes[this.positionNumber]);
       } else if (
         reaction === "down" &&
@@ -110,7 +109,6 @@ export default Vue.extend({
           this.progressState = false;
         }, this.Options.transtionTime);
         ++this.positionNumber;
-        console.log(this.Options.routes[this.positionNumber]);
         this.$router.push(this.Options.routes[this.positionNumber]);
       } else {
         this.progressState = false;
